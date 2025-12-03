@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="card">
+    <view class="row"><text>条码</text>
+      <input class="input" placeholder="可手动输入或点击生成" value="{{form.barcode}}" bindinput="onBarcodeInput"/>
+      <button bindtap="onGenBarcode">自动生成</button>
+    </view>
+
+    <view class="row"><text>名称</text>
+      <input class="input" placeholder="商品名称" value="{{form.name}}" bindinput="onNameInput"/>
+    </view>
+
+    <view class="row"><text>价格(元)</text>
+      <input class="input" type="number" placeholder="价格" value="{{form.price}}" bindinput="onPriceInput"/>
+    </view>
+
+    <view class="row"><text>分类</text>
+      <input class="input" placeholder="分类" value="{{form.category}}" bindinput="onCategoryInput"/>
+    </view>
+
+    <view class="row"><text>库存</text>
+      <input class="input" type="number" placeholder="库存数量" value="{{form.stock}}" bindinput="onStockInput"/>
+    </view>
+
+    <view class="row">
+      <button bindtap="chooseImage">上传图片</button>
+      <image wx:if="{{form.image}}" src="{{form.image}}" class="thumb"/>
+    </view>
+
+    <view class="row">
+      <button class="save" bindtap="onSave">保存到数据库</button>
+      <button class="save" bindtap="onSaveAndUploadBarcode">保存并上传条码图片到云</button>
+    </view>
+  </view>
+
+  <view class="card">
+    <text>条码预览</text>
+    <canvas canvas-id="barcodeCanvas" style="width: 100%; height: 150px; background:#fff;"></canvas>
+    <button bindtap="saveCanvasImage">保存条码到相册</button>
+  </view>
+</view>

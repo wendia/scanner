@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="camera-wrap">
+    <camera id="camera" device-position="back" style="width:100%; height:360rpx;" binderror="onCameraError" />
+    <view class="scan-box"></view>
+  </view>
+
+  <view class="controls">
+    <button bindtap="onScanOnce">单次扫描</button>
+    <button bindtap="onStartContinuous">按住连续扫（示例）</button>
+  </view>
+
+  <view class="result">
+    <text wx:if="{{lastProduct}}">识别: {{lastProduct.name}} ￥{{lastProduct.price}}</text>
+  </view>
+
+  <view class="cart">
+    <text class="title">购物清单 ({{cart.length}})</text>
+    <block wx:for="{{cart}}" wx:key="barcode">
+      <view class="cart-item">
+        <text>{{item.name}}</text>
+        <text>× {{item.qty}}</text>
+        <text>￥{{item.price}}</text>
+        <button data-code="{{item.barcode}}" bindtap="onRemove">删除</button>
+      </view>
+    </block>
+  </view>
+
+  <button class="submit" bindtap="onSubmitCart">提交清单</button>
+</view>

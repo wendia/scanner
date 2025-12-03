@@ -1,0 +1,7 @@
+.page { padding: 24rpx; background: #f7f7f7; min-height:100vh;}
+.card { background: #fff; padding: 20rpx; border-radius: 8rpx; margin-bottom: 20rpx; }
+.row { display:flex; align-items:center; margin-bottom:12rpx; }
+.row text { width: 120rpx; }
+.input { flex:1; border:1rpx solid #e6e6e6; padding:12rpx; border-radius:8rpx; margin-left:12rpx; }
+.thumb { width:80rpx; height:80rpx; margin-left:12rpx; border-radius:6rpx; object-fit:cover; }
+.save { background:#06c; color:#fff; padding:10rpx 18rpx; border-radius:8rpx; margin-right:12rpx;}
