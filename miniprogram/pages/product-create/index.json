@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Products",
   "usingComponents": {
-    "cloud-tip-modal": "/components/cloudTipModal/index"
+    "cloud-tip-modal": "/components/cloudTipModal/index",
+    "nav-bar": "/components/navBar/navigator-bar"
   }
 }

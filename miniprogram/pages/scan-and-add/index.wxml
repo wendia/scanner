@@ -26,4 +26,5 @@
   </view>
 
   <button class="submit" bindtap="onSubmitCart">提交清单</button>
+  <nav-bar />
 </view>

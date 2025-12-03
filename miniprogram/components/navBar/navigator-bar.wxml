@@ -1,0 +1,13 @@
+<view class="navigator">
+  <block wx:for="{{items}}" wx:key="route">
+    <view
+      class="tab {{current===item.route?'active':''}}"
+      data-route="{{item.route}}"
+      bindtap="onTap"
+    >
+      <image wx:if="{{item.icon}}" src="{{item.icon}}" class="icon" />
+      <text class="label">{{item.label}}</text>
+      <view wx:if="{{item.badge && item.badge>0}}" class="badge">{{item.badge}}</view>
+    </view>
+  </block>
+</view>

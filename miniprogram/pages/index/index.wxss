@@ -142,11 +142,3 @@ page {
 }
  */
 
- .footer {
-  padding: 30px 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  bottom: 0;
-  position: absolute;
- }
